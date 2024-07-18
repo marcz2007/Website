@@ -46,6 +46,15 @@
             margin-right: 10px;
         }
 
+        input[type="text"] {
+            margin-left: 25px;
+            margin-top: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 40px);
+        }
+
         input[type="submit"] {
             background: #ff6f61;
             color: white;
@@ -66,27 +75,39 @@
         <h1>Why Didn't You Reply?</h1>
         <form action="#" method="POST">
             <label>
-                <input type="checkbox" name="reason" value="busy">
-                I was too busy
+                <input type="checkbox" name="reason" value="too_long">
+                Your last message was too long
             </label>
             <label>
-                <input type="checkbox" name="reason" value="forgot">
-                I forgot
+                <input type="checkbox" name="reason" value="other_interests">
+                I had multiple other guys messaging me at the time who I was slightly more interested in
             </label>
             <label>
-                <input type="checkbox" name="reason" value="not_interested">
-                I wasn't interested
+                <input type="checkbox" name="reason" value="just_bored">
+                I never actually wanted to meet for a drink, I was just bored and wanted a short chat
             </label>
             <label>
-                <input type="checkbox" name="reason" value="technical_issues">
-                Technical issues
+                <input type="checkbox" name="reason" value="no_bother">
+                I couldn't be bothered to reply
             </label>
             <label>
-                <input type="checkbox" name="reason" value="other">
+                <input type="checkbox" name="reason" value="other" id="otherCheckbox">
                 Other
             </label>
+            <input type="text" name="other_reason" id="otherReason" placeholder="Please specify your reason">
             <input type="submit" value="Submit">
         </form>
     </div>
+    <script>
+        document.getElementById('otherCheckbox').addEventListener('change', function() {
+            const otherReasonInput = document.getElementById('otherReason');
+            if (this.checked) {
+                otherReasonInput.style.display = 'block';
+            } else {
+                otherReasonInput.style.display = 'none';
+            }
+        });
+        document.getElementById('otherReason').style.display = 'none';
+    </script>
 </body>
 </html>
