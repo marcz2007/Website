@@ -1,1 +1,92 @@
-<p>YO</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Didn't You Reply?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background: #ff4a42;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Why Didn't You Reply?</h1>
+        <form action="#" method="POST">
+            <label>
+                <input type="checkbox" name="reason" value="busy">
+                I was too busy
+            </label>
+            <label>
+                <input type="checkbox" name="reason" value="forgot">
+                I forgot
+            </label>
+            <label>
+                <input type="checkbox" name="reason" value="not_interested">
+                I wasn't interested
+            </label>
+            <label>
+                <input type="checkbox" name="reason" value="technical_issues">
+                Technical issues
+            </label>
+            <label>
+                <input type="checkbox" name="reason" value="other">
+                Other
+            </label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
